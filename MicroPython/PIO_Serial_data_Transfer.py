@@ -5,7 +5,7 @@ from time import sleep
 @asm_pio(sideset_init=(PIO.OUT_LOW, PIO.OUT_LOW), out_init=PIO.OUT_LOW, out_shiftdir=PIO.SHIFT_RIGHT, 
  autopull=True, pull_thresh=8)
 def prog():
-    pull()					             .side(0)
+    pull()					          .side(0)
     label("target")
     out(pins, 1)			         .side(2)
     jmp(not_osre, "target")	.side(0)
